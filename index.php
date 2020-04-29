@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="wrapper">
-        <form id="select_categ">
+<form id="select_categ">
             <label>Category</label><br>
             <label>Hats M</label>
             <input type="radio" name="prod_categ" value="hats M"><br>
@@ -28,6 +27,8 @@
             <input type="radio" name="prod_categ" value="shoes F"><br>
             <button type="submit" onclick="select()"> Select </button>
         </form>
+    <div id="wrapper">
+        
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -35,9 +36,10 @@
  function select() {
      $.ajax({
          type: 'post',
-         url: 'select_category.php',
+         url: 'queries/select_category.php',
          data: $("#select_categ").serialize(),
          success: function(data) {
+            $('#wrapper').empty();
             $('#wrapper').append(data);
          }
      });event.preventDefault(); 
