@@ -1,12 +1,35 @@
-#wrapper {
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+aside {
+    position: absolute;
+    left: 0;
+    width: max-content;
+    height: 99vh;
+    border: 1px solid rgb(192, 192, 192);
+}
+
+#navi {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    border: 2px solid green;
+}
+
+#wrapper { /* products get rendered inside of this div */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 83%;
+    margin-left: auto;
+    justify-content: space-evenly;
+
 }
 
 .product_wrapper {
-    width: 400px;
-    height: 400px;
+    width: 350px;
     margin: 10px;
     border: 1px solid grey;
 }
@@ -14,4 +37,46 @@
 .product_wrapper > img {
     width: 250px;
     height: 250px;
+}
+
+#select_categ { /* side bar form */
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.selector { /* divs that contain all the sidebar content */
+    margin: 20px auto 20px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.selector p {
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.selector button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 0px;
+}
+
+.choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 15px;
+}
+
+.choose hr {
+    width: 80%;
+    opacity: 0.2;
+}
+
+.selector img {
+    width: 40px;
+    width: 40px;
 }
