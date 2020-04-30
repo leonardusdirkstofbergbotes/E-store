@@ -5,5 +5,8 @@
     include "../class/products.php";
     $new = new Products();
     $new->select($query);
+    if ($input = 'hats M') {
+        echo "helo";
+    }
 
 ?>

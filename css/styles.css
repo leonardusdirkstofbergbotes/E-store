@@ -15,7 +15,20 @@ aside {
     display: flex;
     flex-direction: row;
     height: 45px;
-    border: 2px solid green;
+    border: 1px solid grey;
+}
+
+#navi button {
+    margin-left: auto;
+    background-color: rgb(255, 151, 151);
+    border: none;
+    outline: none;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+#navi button > img {
+    width: 30px;
 }
 
 #wrapper { /* products get rendered inside of this div */
@@ -73,4 +86,18 @@ aside {
 .selector img {
     width: 40px;
     width: 40px;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.bucket {
+    position: relative;
+    text-align: center;
 }

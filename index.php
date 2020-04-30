@@ -8,12 +8,12 @@
     <script src="script/jquery.js"></script>
 </head>
 <body>
-    <img src="" id="hero">
-<?php 
+    
+<?php
     include "sections/navbar.php";
     include "sections/sidebar.php"; 
 ?>
-    
+    <img src="" id="hero">
     <div id="wrapper">
         
 
@@ -34,6 +34,9 @@
          url: 'queries/select_category.php',
          data: $("#select_categ").serialize(),
          success: function(data) {
+    //        var splitted = data.split("|");
+    // document.write(splitted);
+
             $('#wrapper').empty();
             $('#wrapper').append(data);
          }
