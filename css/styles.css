@@ -51,12 +51,6 @@ aside {
     flex-direction: row;
 }
 
-.selector p {
-    font-size: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
 .selector button {
     background-color: transparent;
     border: none;

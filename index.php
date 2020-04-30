@@ -21,16 +21,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $(".choose").hide();
-    $(".hover").hide();
     $("#select_categ").mouseover(function(){
-    $(".hover").show(300);
-}).mouseleave(function(){ 
-    $(".hover").hide(300);
-})
-
-$(".hover").click(function(elm){
-    $(".choose").toggle(300);
-})
+    $(".choose").show(300);
+    }).mouseleave(function() {
+        $(".choose").hide(300);
+    })
 
     
  function select() {
