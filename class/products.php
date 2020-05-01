@@ -12,10 +12,13 @@
         $result = $this->conn->query($var);
         while ($data = $result->fetch_assoc()) : ?>
             <div class="product_wrapper" id="<?php echo $data['prod_id']; ?>">
-                <h1><?php echo $data['prod_name'] ?></h1>
-                <p><?php echo $data['prod_desc'] ?> </p>
+            <b id="price">R <?php echo $data['prod_price']; ?></b>
+                <p class="describe"><?php echo $data['prod_desc'] ?> </p>
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
-                <b>R <?php echo $data['prod_price']; ?></b>
+                <div class="buttons">
+                    <button class="info">Show info</button>
+                    <button class="add">Add to Cart</button>
+                </div>
             </div>
             <?php endwhile; 
     }

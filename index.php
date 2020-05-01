@@ -13,27 +13,20 @@
     include "sections/navbar.php";
     include "sections/sidebar.php"; 
 ?>
-    <img src="" id="hero">
+    <div id="hero"></div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 
         include "class/front_page.php";
     ?> 
-        <div class="scroll">
-        <button onclick="previous()">Previous</button>
-                <button onclick="next()">Next</button>
-        <b>Shirts</b>
-           <?php $shirts = new Featured('shirts M'); ?>
-        </div>
+        <b class="categ">Shirts</b>
+        <?php $shirts = new Featured('shirts M'); ?>
 
-        <div class="scroll">
-        <b>Shoes</b>
-            <?php $shoes = new Featured('shoes F'); ?>
-        </div>
+        <b class="categ">Shoes</b>
+        <?php $shoes = new Featured('shoes F'); ?>
 
-        <div class="scroll">
-        <b>Hats</b>
-            <?php $hats = new Featured('hats F'); ?>
-        </div>
+        <b class="categ">Hats</b>
+        <?php $hats = new Featured('hats F'); ?>
+
     </div>
 
     <?php 
@@ -48,17 +41,18 @@
                 $(".choose").hide(300);
             })
 
-            function previous() {
-                window.scrollTo(300, 0);
+            function right() {
+                var pos = $(".scroll").scrollLeft();
+                $('.scroll').animate( { scrollLeft: '+=700' }, 1500, 'swing' );
             }
 
-            function next() {
-                window.scrollBy({
-                top: 100,
-                left: 100,
-                behavior: 'smooth'
-                });
+            function left() {
+                var pos = $(".scroll").scrollLeft();
+                $('.scroll').animate( { scrollLeft: '-=700' }, 1500, 'swing' );
+                // $(".scroll").scrollLeft(pos - 200)
             }
+
+            
 
             function select() {
                 $.ajax({
@@ -68,6 +62,7 @@
                     success: function(data) {
                         $('#wrapper').empty();
                         $('#wrapper').append(data);
+                        document.getElementById('wrapper').scrollIntoView();
                     }
                 });event.preventDefault(); 
             }

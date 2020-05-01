@@ -1,4 +1,4 @@
-    <aside>    
+    
         <form id="select_categ">
             <!-- Hat section -->
             <div class="selector">
@@ -40,4 +40,3 @@
                 </div>
             </div>
         </form>
-    </aside>
