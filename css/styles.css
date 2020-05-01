@@ -114,10 +114,42 @@ aside {
     max-height: 230px;
 }
 
+#footy_header {
+    display: flex;
+    font-size: 18px;
+    background-image: url("../img/hero/footer_header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 15px;
+}
+
+#footy_header p {
+    flex: 3;
+}
+
+#footy_header > div {
+    flex: 1;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#footy_header > div button {
+    padding: 15px;
+    width: 150px;
+    border: none;
+    background-color: rgb(103, 211, 103);
+    color: white;
+    font-size: 20px;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
 #footy { /* footer */
     display: flex;
     flex-direction: row;
     border: 2px solid purple;
+    background-color: rgb(102, 102, 102);
 }
 
 #left {
@@ -134,14 +166,15 @@ aside {
 
 #follow {
     margin: 0px auto;
-    font-size: larger;
+    font-size: 30px;
     font-weight: 700;
+    color: rgb(235, 235, 235);
 }
 
 #stack {
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0px 30px;
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -151,6 +184,8 @@ aside {
     text-decoration: none;
     display: flex;
     align-items: center;
+    font-size: 18px;
+    color: rgb(235, 235, 235);
 }
 
 #stack img {
@@ -165,7 +200,7 @@ aside {
 }
 
 #payment_icons img {
-    width: 40px;
+    width: 50px;
 }
 
 #right {
