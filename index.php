@@ -15,6 +15,23 @@
 ?>
     <img src="" id="hero">
     <div id="wrapper">
+    <?php 
+        include "class/front_page.php";
+    ?> 
+        <div class="scroll">
+        <button onclick="previous()">Previous</button>
+                <button onclick="next()">Next</button>
+        <b>Shirts</b>
+           <?php $shirts = new Featured('shirts M'); ?>
+        </div>
+        <div class="scroll">
+        <b>Shoes</b>
+            <?php $shoes = new Featured('shoes F'); ?>
+        </div>
+        <div class="scroll">
+        <b>Hats</b>
+            <?php $hats = new Featured('hats F'); ?>
+        </div>
         
 
     </div>
@@ -26,6 +43,18 @@
     }).mouseleave(function() {
         $(".choose").hide(300);
     })
+
+    function previous() {
+        window.scrollTo(300, 0);
+    }
+
+    function next() {
+        window.scrollBy({
+        top: 100,
+        left: 100,
+        behavior: 'smooth'
+        });
+    }
 
     
  function select() {
