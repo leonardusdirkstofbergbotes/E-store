@@ -88,7 +88,7 @@ aside {
     width: 40px;
 }
 
-.scroll {
+.scroll { /* Horizontal scrollable images on the landing page */
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -102,7 +102,7 @@ aside {
     font-size: 25px;
 }
 
-.bucket {
+.bucket { /* divs that contain the products in the scroll div */
     position: relative;
     text-align: center;
     height: 80%;
@@ -112,4 +112,26 @@ aside {
 
 .bucket img {
     max-height: 230px;
+}
+
+#footy { /* footer */
+    display: flex;
+    flex-direction: row;
+    border: 2px solid purple;
+}
+
+#left {
+    border: 1px solid green;
+    height: 300px;
+    flex: 1;
+    
+}
+
+#right {
+    border: 1px solid red;
+    height: 300px;
+    flex: 1;
+   
+
+
 }
