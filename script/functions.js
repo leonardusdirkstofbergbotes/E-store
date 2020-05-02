@@ -1,7 +1,12 @@
 $("#signup_form").submit(function(event){ //signup modal
-    submitForm(); // handles the data with ajax
+    signupForm(); // handles the data with ajax
     return false; //prevents page from refreshing
 });
+
+// $("#login_form").submit(function(event){ //signup modal
+//     loginForm(); // handles the data with ajax
+//     return false; //prevents page from refreshing
+// });
 
 $(".choose").hide();
     $("#select_categ").mouseover(function(){

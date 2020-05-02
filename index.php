@@ -56,26 +56,42 @@
     <script src="./script/functions.js"></script>
         <script>
 
-    function submitForm(){
+    function signupForm(){
 	 $.ajax({
 		type: "POST",
 		url: "queries/create_user.php",
 		data: $('form#signup_form').serialize(),
 		success: function(data){
-            $("#close").click()
+            $("#close_signup").click()
             // $("#contact-modal").modal('toggle');
             if (data == "created") {
                 alert('well done');
             } else if (data == "exists") {
                 alert('already exists');
             }
-			
 		},
 		error: function(){
 			alert("Error");
 		}
 	});
-}
+} // signup ajax ends
+
+
+// function loginForm(){
+// 	 $.ajax({
+// 		type: "POST",
+// 		url: "queries/check_user.php",
+// 		data: $('form#login_form').serialize(),
+// 		success: function(data){
+//             $("#close_login").click(),
+//             console.log(data);
+// 		},
+// 		error: function(){
+// 			alert("Error");
+// 		}
+// 	});
+// } // login ajax ends
+
 
             function select() {
                 $.ajax({

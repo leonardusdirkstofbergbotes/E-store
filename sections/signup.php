@@ -1,5 +1,5 @@
 <!-- Register modal -->
-<div id="contact-modal" class="modal fade" role="dialog">
+<div id="signup_modal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -26,7 +26,7 @@
 					</div>					
 				</div>
 				<div class="modal-footer">					
-					<button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_signup">Close</button>
 					<input type="submit" class="btn btn-success" id="submit">
 				</div>
 			</form>

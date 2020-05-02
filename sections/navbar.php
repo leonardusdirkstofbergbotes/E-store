@@ -5,13 +5,13 @@
         <a href="#footy">About us</a>
         <!-- Trigger signup modal -->
         <div id="contact">
-            <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#contact-modal">
+            <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#signup_modal">
                 Show Contact Form
             </button>
         </div>
 
         <!-- Trigger login modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login_modal">
             Login
         </button>
         <?php if (isset($_SESSION)) : ?>
