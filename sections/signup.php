@@ -6,7 +6,7 @@
 				<a class="close" data-dismiss="modal">×</a>
 				<h3>Signup</h3>
 			</div>
-			<form id="contactForm" name="contact" role="form">
+			<form id="signup_form" name="contact" role="form">
 				<div class="modal-body">				
 					<div class="form-group">
 						<label for="name">Name</label>
@@ -26,7 +26,7 @@
 					</div>					
 				</div>
 				<div class="modal-footer">					
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
 					<input type="submit" class="btn btn-success" id="submit">
 				</div>
 			</form>
