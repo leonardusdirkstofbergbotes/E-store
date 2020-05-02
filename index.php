@@ -63,6 +63,26 @@
                 // $(".scroll").scrollLeft(pos - 200)
             }
 
+            $("#contactForm").submit(function(event){
+		submitForm();
+		return false;
+	});
+
+    function submitForm(){
+	 $.ajax({
+		type: "POST",
+		url: "queries/check_user.php",
+		cache:false,
+		data: $('form#contactForm').serialize(),
+		success: function(response){
+			$("#contact").html(response)
+			$("#contact-modal").modal('hide');
+		},
+		error: function(){
+			alert("Error");
+		}
+	});
+}
             
 
             function select() {

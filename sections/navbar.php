@@ -4,9 +4,11 @@
         <a href="#footy">Contact us</a>
         <a href="#footy">About us</a>
         <!-- Trigger signup modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup">
-            Register
-        </button>
+        <div id="contact">
+            <button type="button" class="btn btn-info btn" data-toggle="modal" data-target="#contact-modal">
+                Show Contact Form
+            </button>
+        </div>
 
         <!-- Trigger login modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
