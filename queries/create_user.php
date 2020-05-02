@@ -21,7 +21,7 @@
         $_SESSION['name'] = $record['name'];
         $_SESSION['surname'] = $record['surname'];
         $_SESSION['email'] = $record['email'];
-        // header("Location: email_handler.php"); /* <--- This page will send an email to the user in order to verify his account */
+        header("Location: email_handler.php"); /* <--- This page will send an email to the user in order to verify his account */
         echo "created";
     }
     ?>

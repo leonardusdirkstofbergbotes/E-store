@@ -1,3 +1,12 @@
+<?php 
+    if(isset($_GET['session'])) {
+        session_start();
+        var_dump($_SESSION);
+    } else {
+    echo "session doesn't exist";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +59,7 @@
     function submitForm(){
 	 $.ajax({
 		type: "POST",
-		url: "queries/check_user.php",
+		url: "queries/create_user.php",
 		data: $('form#signup_form').serialize(),
 		success: function(data){
             $("#close").click()
