@@ -14,6 +14,9 @@
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login">
             Login
         </button>
-        <button id="cart" <?php if (!isset($_SESSION)) {echo "disabled";} else {}; ?>><img src='./img/icons/cart.png'></button>
+        <?php if (isset($_SESSION)) : ?>
+            <p>Signed in as <?php echo $_SESSION['name']; ?> </p>
+        <?php endif; ?>
+        <button id="cart" <?php if (!isset($_SESSION)) {echo "disabled"; echo " title=\"please login to use the cart\"";} else {}; ?>><img src='./img/icons/cart.png'></button>
     <div>
 </nav>
