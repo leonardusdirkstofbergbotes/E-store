@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online store</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/styles.css">
     <script src="script/jquery.js"></script>
 </head>
@@ -11,7 +15,9 @@
     
 <?php
     include "sections/navbar.php";
-    include "sections/sidebar.php"; 
+    include "sections/sidebar.php";
+    include "sections/signup.php"; // signup modal
+    include "sections/login.php";  //login modal
 ?>
     <div id="hero"></div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
