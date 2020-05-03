@@ -1,3 +1,5 @@
+
+
 $("#signup_form").submit(function(event){ //signup modal
     signupForm(); // handles the data with ajax
     return false; //prevents page from refreshing
