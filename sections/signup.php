@@ -1,20 +1,35 @@
 <!-- Register modal -->
-<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Register</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+<div id="signup_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">×</a>
+				<h3>Signup</h3>
+			</div>
+			<form id="signup_form" name="contact" role="form">
+				<div class="modal-body">				
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+						<label for="surname">Surname</label>
+						<input type="text" name="surname" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control">
+					</div>					
+				</div>
+				<div class="modal-footer">					
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_signup">Close</button>
+					<input type="submit" class="btn btn-success" id="submit">
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
