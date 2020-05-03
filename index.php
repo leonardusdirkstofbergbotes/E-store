@@ -56,6 +56,18 @@
     <script src="./script/functions.js"></script>
         <script>
 
+        function add_to_cart(elmnt) {
+            var id = elmnt.id;
+            $.ajax({
+                type: 'post',
+                url: 'queries/add_cart.php',
+                data: {prod_id: id},
+                success: function(data) {
+                    console.log(data);
+                }
+            })
+        }
+
     function signupForm(){
 	 $.ajax({
 		type: "POST",

@@ -17,7 +17,7 @@
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
                 <div class="buttons">
                     <button class="info">Show info</button>
-                    <button class="add">Add to Cart</button>
+                    <button class="add" onclick="add_to_cart(this)" id="<?php echo $data['prod_id']; ?>">Add to Cart</button>
                 </div>
             </div>
             <?php endwhile; 

@@ -18,7 +18,7 @@
                 session_start();
                 $_SESSION['name'] = $record['name'];
                 $_SESSION['surname'] = $record['surname'];
-                $_SESSION['id'] = $record['user_id'];
+                $_SESSION['user_id'] = $record['user_id'];
                 $_SESSION['email'] = $record['email'];
                 header("Location: ../index.php? session=yes");
             } else if ($pass->num_rows == 0) { /* Password is incorrect */
