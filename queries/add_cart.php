@@ -7,5 +7,5 @@
                  VALUES (\"$user\", \"$prod_id\", 'm');";
     $conn = new mysqli('localhost:3308', 'root', '', 'e_store');
     $conn->query($add_cart);
-    echo "success";
+    echo $user;
 ?>

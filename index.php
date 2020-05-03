@@ -43,7 +43,7 @@
         <?php $hats = new Featured('hats F'); ?>
 
     </div>
-
+    <div id='newdata'></div>
     <?php 
         include "sections/footer.php";
     ?>
@@ -63,7 +63,15 @@
                 url: 'queries/add_cart.php',
                 data: {prod_id: id},
                 success: function(data) {
-                    console.log(data);
+                    $.ajax({
+                        type: 'post',
+                        url: 'sections/cart.php',
+                        data: data,
+                        success: function(data) {
+                            $("#newdata").empty();
+                            $("#newdata").append(data);
+                        }
+                    })
                 }
             })
         }
