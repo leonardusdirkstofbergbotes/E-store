@@ -1,4 +1,7 @@
-
+$("#cartbox").hide();
+$("#cart").click(function(){
+    $("#cartbox").toggle(300);
+});
 
 $("#signup_form").submit(function(event){ //signup modal
     signupForm(); // handles the data with ajax

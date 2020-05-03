@@ -23,6 +23,7 @@
     include "sections/sidebar.php";
     include "sections/signup.php"; // signup modal
     include "sections/login.php";  //login modal
+    include "sections/cartbox.php";
 ?>
     <div id="hero"></div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
@@ -39,8 +40,6 @@
         <?php $hats = new Featured('hats F'); ?>
 
     </div>
-    <div id="cart_content"></div>
-
     <?php 
         include "sections/footer.php";
     ?>

@@ -34,6 +34,38 @@ html {
     width: 30px;
 }
 
+#cartbox { /* the box that drop downs when you click on the cart icon */
+    background-color: white;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+#cart_item {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 15px 3px;
+    align-items: flex-end;
+    padding: 5px;
+    border-bottom: 1px solid rgb(190, 189, 189);
+    border-top: 1px solid rgb(190, 189, 189);
+}
+
+#cart_item img {
+    width: 70px;
+    height: 70px;
+}
+
+#checkout { /* Checkout button in the cart box */
+    padding: 10px;
+    background-color: rgb(255, 134, 134);
+    color: rgb(238, 238, 238);
+}
+
 #hero {
     background-image: url("../img/hero/virus.jpg");
     min-height: 400px; 
