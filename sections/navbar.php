@@ -21,7 +21,7 @@
             <?php endif; ?>
 
             <?php if (isset($_SESSION)) : ?> <!-- Logout the user -->
-                <a href="#"> Logout </a>
+                <a href="./queries/end_ses.php"> Logout </a>
             <?php endif; ?>
 
         </div>
