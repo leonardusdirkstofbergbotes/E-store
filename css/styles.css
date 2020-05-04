@@ -7,11 +7,47 @@ html {
     scroll-behavior: smooth;
 }
 
+/* reusable styles */
+
+.light_sec_button { /* login button, info button, scrollby buttons */
+    border: 1.5px solid rgb(141, 141, 251); 
+    color: rgb(141, 141, 251); 
+    outline: none;
+    border-radius: 4px;
+}
+
+.light_pri_button { /* register button, add button */
+    border: none;
+    outline: none;
+    background-color: rgb(141, 141, 251);;
+    color: white;
+    border-radius: 4px;
+}
+
+.light_war_button { /* checkout button */
+    background-color: rgb(255, 134, 134);
+    color: white;
+}
+
+.font_offwhite { /* follow, stack a, checkout button */
+    color: rgb(235, 235, 235);
+}
+
+.font_blue {
+    color: rgb(255, 134, 134);
+}
+
+.light_back { /* cartbox, product_wrapper, bucket */
+    background-color: white;
+}
+
+
+/* reusable styles END */
+
 #navi {
     display: flex;
     flex-direction: row;
     height: 45px;
-    border: 1px solid grey;
     background-color: transparent;
 }
 
@@ -33,7 +69,6 @@ html {
 }
 
 #cart {
-    background-color: rgb(255, 151, 151);
     border: none;
     outline: none;
     border-radius: 2%;
