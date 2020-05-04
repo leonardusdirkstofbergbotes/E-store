@@ -72,10 +72,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./script/functions.js"></script>
-        <script>
+    <script>
          
     var user_id = "<?php if (isset($_SESSION)) {echo $_SESSION['user_id'];} else {echo "none";} ?>";
-    console.log(user_id);          
     $.ajax({
         type: 'post',
         url: 'queries/cart.php',
@@ -87,68 +86,81 @@
     })
 
     function add_to_cart(elmnt) {
-            var id = elmnt.id;
-            var user_id = "<?php if (isset($_SESSION)) {echo $_SESSION['user_id'];} else {echo "none";} ?>";
-            $.ajax({
-                type: 'post',
-                url: 'queries/add_cart.php',
-                data: {prod_id: id},
-                success: function() {
-                    $.ajax({
-                        type: 'post',
-                        url: 'queries/cart.php',
-                        data: user_id,
-                        success: function(data) {
-                            $("#cart_content").empty();
-                            $("#cart_content").append(data);
-                        }
-                    })
-                }
-            })
-        }
-
-
-        function signupForm(){
-	 $.ajax({
-		type: "POST",
-		url: "queries/create_user.php",
-		data: $('form#signup_form').serialize(),
-		success: function(data){
-            $("#close_signup").click()
-            // $("#contact-modal").modal('toggle');
-            if (data == "created") {
-                alert('well done');
-            } else if (data == "exists") {
-                alert('already exists');
-            }
-		},
-		error: function(){
-			alert("Error");
-		}
-	});
-}
-
-
-function select() {
+        var id = elmnt.id;
+        var user_id = "<?php if (isset($_SESSION)) {echo $_SESSION['user_id'];} else {echo "none";} ?>";
+        $.ajax({
+            type: 'post',
+            url: 'queries/add_cart.php',
+            data: {prod_id: id},
+            success: function() {
                 $.ajax({
                     type: 'post',
-                    url: 'queries/select_category.php',
-                    data: $("#select_categ").serialize(),
+                    url: 'queries/cart.php',
+                    data: user_id,
                     success: function(data) {
-                        $('#wrapper').empty();
-                        $('#wrapper').append(data);
-                        document.getElementById('wrapper').scrollIntoView();
+                        $("#cart_content").empty();
+                        $("#cart_content").append(data);
                     }
-                });event.preventDefault(); 
+                })
             }
-
-        
-
-    
+        })
+    }
 
 
-            
-        
-        </script>
+    function signupForm(){
+        $.ajax({
+            type: "POST",
+            url: "queries/create_user.php",
+            data: $('form#signup_form').serialize(),
+            success: function(data){
+                $("#close_signup").click()
+                if (data == "created") {
+                    alert('well done');
+                } else if (data == "exists") {
+                    alert('already exists');
+                }
+            },
+            error: function(){
+                alert("Error");
+            }
+        });
+    }
+
+
+    function select() {
+        $.ajax({
+            type: 'post',
+            url: 'queries/select_category.php',
+            data: $("#select_categ").serialize(),
+            success: function(data) {
+                $('#wrapper').empty();
+                $('#wrapper').append(data);
+                document.getElementById('wrapper').scrollIntoView();
+            }
+        });event.preventDefault(); 
+    }
+
+    function delete_item(elm) {
+        var item = elm.id;
+        $.ajax({
+            type: 'post',
+            url: 'queries/delete_item.php',
+            data: {user_id: user_id,
+                    item_no: item},
+            success: function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'queries/cart.php',
+                    data: user_id,
+                    success: function(data) {
+                        $("#cart_content").empty();
+                        $("#cart_content").append(data);
+                    }
+                })
+            }
+        })
+    }
+
+    </script>
 </body>
 </html>

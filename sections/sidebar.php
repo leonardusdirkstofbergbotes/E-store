@@ -4,7 +4,7 @@
             <div class="selector">
                 <button><img src="./img/icons/hat.png"></button>
                 <div id="hats" class="choose">
-                    <button onclick="select()"><label><input type="radio" name="prod_categ" value="hats M">Male</label></button>
+                    <button onclick="select()"><input type="radio" name="prod_categ" value="hats M">Male</label></button>
                     <hr>
                     <button onclick="select()"><label><input type="radio" name="prod_categ" value="hats F">Female</label></button>
                 </div>

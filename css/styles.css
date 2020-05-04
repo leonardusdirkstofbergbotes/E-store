@@ -21,13 +21,54 @@ html {
     align-items: center;
 }
 
-#cart {
+#login_register {
+    margin-right: 10px;
     margin-left: auto;
+    align-self: center;
+    display: flex;
+}
+
+#login_register p {
+    align-self: center;
+}
+
+#cart {
     background-color: rgb(255, 151, 151);
     border: none;
     outline: none;
     border-radius: 2%;
     cursor: pointer;
+}
+
+#cart_options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#cart_options > button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.del {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+#register {
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+#login {
+    padding: 5px;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px;
 }
 
 #navi button > img {
@@ -42,6 +83,8 @@ html {
     flex-direction: column;
     position: absolute;
     right: 0;
+    max-height: 400px;
+    overflow-y: scroll;
 }
 
 #cart_header {
@@ -54,7 +97,6 @@ html {
     display: flex;
     flex-direction: row;
     margin: 15px 3px;
-    align-items: flex-end;
     padding: 5px;
     border-bottom: 1px solid rgb(190, 189, 189);
     border-top: 1px solid rgb(190, 189, 189);
@@ -76,7 +118,7 @@ html {
 }
 
 #hero {
-    background-image: url("../img/hero/virus.jpg");
+    background-image: url("../img/hero/hero.jpg");
     min-height: 400px; 
     background-attachment: fixed;
     background-position: center;
@@ -185,13 +227,14 @@ html {
 .choose {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     margin-left: 15px;
 }
 
-.choose hr {
+.selector hr {
     width: 80%;
-    opacity: 0.2;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .selector img {
