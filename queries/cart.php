@@ -13,8 +13,10 @@
             $products = $conn->query($get_product); /* get the product info from table */ 
             
             while ($prod = $products->fetch_assoc()) : ?>
-                <div>
-                    <h1><?php echo $prod['prod_name']; ?></h1>
+                <div id="cart_item">
+                    <img src="./img/products/<?php echo $prod['prod_img']; ?>">
+                    <p><?php echo $prod['prod_name']; ?></p>
+                    <b> R <?php echo $prod['prod_price']; ?></b>
                 </div>
             <?php endwhile; 
         }

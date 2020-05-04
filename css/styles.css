@@ -34,6 +34,47 @@ html {
     width: 30px;
 }
 
+#cartbox { /* the box that drop downs when you click on the cart icon */
+    background-color: white;
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+}
+
+#cart_header {
+    text-align: center;
+}
+
+
+#cart_item {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 15px 3px;
+    align-items: flex-end;
+    padding: 5px;
+    border-bottom: 1px solid rgb(190, 189, 189);
+    border-top: 1px solid rgb(190, 189, 189);
+}
+
+#cart_item img {
+    width: 70px;
+    height: 70px;
+}
+
+#checkout { /* Checkout button in the cart box */
+    padding: 10px;
+    background-color: rgb(255, 134, 134);
+    color: white;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
 #hero {
     background-image: url("../img/hero/virus.jpg");
     min-height: 400px; 
@@ -162,7 +203,10 @@ html {
     display: flex;
     flex-direction: column;
     width: 85%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
 
 .scroll { /* Horizontal scrollable images on the landing page */
     display: flex;
@@ -244,12 +288,10 @@ html {
 #footy { /* footer */
     display: flex;
     flex-direction: row;
-    border: 2px solid purple;
     background-color: rgb(102, 102, 102);
 }
 
 #left {
-    border: 1px solid green;
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -300,6 +342,5 @@ html {
 }
 
 #right {
-    border: 1px solid red;
     flex: 1;
 }
