@@ -88,6 +88,20 @@
         }
     })
 
+
+    function show_more(elmnt) {
+        but = elmnt.id;
+        
+        $.ajax({
+            type: 'post',
+            url: 'queries/show_more.php',
+            data: {prod_id: but},
+            success: function(data) {
+                console.log(data);
+            }
+        })
+    }
+
     function add_to_cart(elmnt) {
         var id = elmnt.id;
         var user_id = "<?php if (isset($_SESSION)) {echo $_SESSION['user_id'];} else {echo "none";} ?>";
