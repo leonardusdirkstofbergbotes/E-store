@@ -30,15 +30,38 @@
     <?php 
         include "class/front_page.php";
     ?> 
-        <b class="categ">Shirts</b>
-        <?php $shirts = new Featured('shirts M'); ?>
+        <div class="featured">
+            <b class="categ">Shirts</b>
+            <div class="scroll" id="1">
+                <?php $shirts = new Featured('shirts M'); ?>
+            </div>
+            <div class="scrollby">
+                <button onclick="left(this)" id="1"> previous </button>
+                <button onclick="right(this)" id="1"> next </button>
+            </div>
+        </div>
 
-        <b class="categ">Shoes</b>
-        <?php $shoes = new Featured('shoes F'); ?>
+        <div class="featured">
+            <b class="categ">Shoes</b>
+            <div class="scroll" id="2">
+                <?php $shoes = new Featured('shoes F'); ?>
+            </div>
+            <div class="scrollby">
+                <button onclick="left(this)" id="2"> previous </button>
+                <button onclick="right(this)" id="2"> next </button>
+            </div>
+        </div>
 
-        <b class="categ">Hats</b>
-        <?php $hats = new Featured('hats F'); ?>
-
+        <div class="featured">
+            <b class="categ">Hats</b>
+            <div class="scroll" id="3">
+                <?php $hats = new Featured('hats F'); ?>
+            </div>
+            <div class="scrollby">
+                <button onclick="left(this)" id="3"> previous </button>
+                <button onclick="right(this)" id="3"> next </button>
+            </div>
+        </div>
     </div>
     <?php 
         include "sections/footer.php";

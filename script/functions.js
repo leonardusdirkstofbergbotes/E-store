@@ -8,11 +8,6 @@ $("#signup_form").submit(function(event){ //signup modal
     return false; //prevents page from refreshing
 });
 
-// $("#login_form").submit(function(event){ //signup modal
-//     loginForm(); // handles the data with ajax
-//     return false; //prevents page from refreshing
-// });
-
 $(".choose").hide();
     $("#select_categ").mouseover(function(){
     $(".choose").show(300);
@@ -20,12 +15,14 @@ $(".choose").hide();
         $(".choose").hide(300);
     })
 
-function right() {
-    var pos = $(".scroll").scrollLeft();
-    $('.scroll').animate( { scrollLeft: '+=700' }, 1500, 'swing' );
+function right(elmnt) { 
+    par = elmnt.id;
+    div = $(this).parent().parent();
+    $('#' + par + '.scroll').animate( { scrollLeft: '+=700' }, 1500, 'swing' );
 }
 
-function left() {
-    var pos = $(".scroll").scrollLeft();
-    $('.scroll').animate( { scrollLeft: '-=700' }, 1500, 'swing' );
+function left(elmnt) {
+    par = elmnt.id;
+    div = $(this).parent().parent();
+    $('#' + par + '.scroll').animate( { scrollLeft: '-=700' }, 1500, 'swing' );
 }
