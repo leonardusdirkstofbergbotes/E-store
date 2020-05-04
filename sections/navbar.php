@@ -5,14 +5,14 @@
         <a href="#footy">About us</a>
         <div id="login_register">
             <?php if (!isset($_SESSION)) : ?> <!-- Login and register buttons -->
-                <!-- Trigger signup modal -->
-                <button type="button" id="register" data-toggle="modal" data-target="#signup_modal">
-                        Register
-                </button>
-
                 <!-- Trigger login modal -->
                 <button type="button" id="login" data-toggle="modal" data-target="#login_modal">
                     Login
+                </button>
+
+                <!-- Trigger signup modal -->
+                <button type="button" id="register" data-toggle="modal" data-target="#signup_modal">
+                        Register
                 </button>
             <?php endif; ?>
 

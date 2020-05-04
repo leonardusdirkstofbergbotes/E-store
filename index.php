@@ -2,7 +2,6 @@
     if(isset($_GET['session'])) {
         session_start();
     } else {
-    echo "session doesn't exist";
     }
 ?>
 
@@ -26,6 +25,10 @@
     include "sections/cartbox.php";
 ?>
     <div id="hero"></div>
+    <div id="footy_header">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia impedit, ullam quasi eaque sint corporis quisquam vitae obcaecati. Quibusdam sequi sapiente corporis repellat voluptates dolorem odit velit ad deserunt.</p>
+    <div><button>Button</button></div>
+</div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 
         include "class/front_page.php";
