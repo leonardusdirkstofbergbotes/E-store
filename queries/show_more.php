@@ -7,9 +7,9 @@
     while($data = $result->fetch_assoc()) : ?>
         <div id="modal_content">
             
-            <div class="img_hover_zoom">
+            
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
-            </div>
+            
             
         </div>
     <?php endwhile;
