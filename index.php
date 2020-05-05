@@ -26,7 +26,7 @@
     include "sections/cartbox.php";
 ?>
     <div id="hero"></div>
-    <div id="footy_header">
+    <div id="header">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia impedit, ullam quasi eaque sint corporis quisquam vitae obcaecati. Quibusdam sequi sapiente corporis repellat voluptates dolorem odit velit ad deserunt.</p>
     <div><button>Button</button></div>
 </div>

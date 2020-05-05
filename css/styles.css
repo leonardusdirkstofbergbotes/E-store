@@ -378,7 +378,7 @@ html {
     max-height: 230px;
 }
 
-#footy_header {
+#header {
     display: flex;
     font-size: 18px;
     background-image: url("../img/hero/footer_header.jpg");
@@ -387,18 +387,18 @@ html {
     padding: 15px;
 }
 
-#footy_header p {
+#header p {
     flex: 3;
 }
 
-#footy_header > div {
+#header > div {
     flex: 1;
     height: 100%;
     margin: auto;
     text-align: center;
 }
 
-#footy_header > div button {
+#header > div button {
     padding: 15px;
     width: 150px;
     border: 1.5px solid rgb(103, 123, 211);
@@ -407,6 +407,26 @@ html {
     font-size: 20px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#footy_header {
+    display: flex;
+    justify-content: space-evenly;
+    padding:10px;
+    background-color: rgb(167, 167, 167);
+}
+
+#footy {
+    padding: 15px;
+}
+
+#footy_header img {
+    height: 30px;
+    margin-right: 5px;
+}
+
+#footy_header a {
+    color: white;
 }
 
 #footy { /* footer */
@@ -439,30 +459,37 @@ html {
     padding: 0px 30px;
     display: flex;
     flex: 1;
-    justify-content: space-between;
-}
-
-#stack a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: rgb(235, 235, 235);
 }
 
 #stack img {
-    width: 40px;
-    margin-right: 20px;
+    width: 210px;
+    flex: 1;
+    border-radius: 4px;
+}
+
+#footer_bottom {
+    display: flex;
+    background-color: rgb(233, 233, 233);
 }
 
 #payment_icons {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
+    flex: 1;
 }
 
 #payment_icons img {
-    width: 50px;
+    width: 40px;
+}
+
+#nate_bottom {
+    display: flex;
+    flex: 3;
+}
+
+#nate_bottom p {
+    margin: auto;
+    color: rgb(170, 170, 170);
 }
 
 #right {

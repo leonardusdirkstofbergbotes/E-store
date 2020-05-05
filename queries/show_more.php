@@ -6,11 +6,7 @@
     $result = $conn->query($get_prod);
     while($data = $result->fetch_assoc()) : ?>
         <div id="modal_content">
-            
-            
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
-            
-            
         </div>
     <?php endwhile;
 ?>
