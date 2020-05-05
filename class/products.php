@@ -16,7 +16,8 @@
                 <p class="describe"><?php echo $data['prod_desc'] ?> </p>
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
                 <div class="buttons">
-                    <button class="info" onclick="show_more(this)" id="<?php echo $data['prod_id']; ?>">Show info</button>
+                    <!-- Trigger show_more modal -->
+                    <button class="info" data-target="#show_more_modal" data-toggle="modal" onclick="show_more(this)" id="<?php echo $data['prod_id']; ?>" >Show info</button>
                     <button class="add" onclick="add_to_cart(this)" id="<?php echo $data['prod_id']; ?>">Add to Cart</button>
                 </div>
             </div>
@@ -25,3 +26,8 @@
 }
 
 ?>
+
+<!-- Trigger login modal -->
+<!-- <button type="button" data-toggle="modal" data-target="#show_more_modal"> -->
+                    
+                

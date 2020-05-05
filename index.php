@@ -22,6 +22,7 @@
     include "sections/sidebar.php";
     include "sections/signup.php"; // signup modal
     include "sections/login.php";  //login modal
+    include "sections/show_more_modal.php"; // show_more modal
     include "sections/cartbox.php";
 ?>
     <div id="hero"></div>
@@ -97,9 +98,10 @@
             url: 'queries/show_more.php',
             data: {prod_id: but},
             success: function(data) {
-                console.log(data);
+                $("#show_more_body").empty();
+                $("#show_more_body").append(data);
             }
-        })
+        }) 
     }
 
     function add_to_cart(elmnt) {
