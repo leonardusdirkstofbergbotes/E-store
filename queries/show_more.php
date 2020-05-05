@@ -4,6 +4,13 @@
     $conn = new mysqli('localhost:3308', 'root', '', 'e_store');
 
     $result = $conn->query($get_prod);
-    $data = $result->fetch_assoc();
-
+    while($data = $result->fetch_assoc()) : ?>
+        <div id="modal_content">
+            
+            <div class="img_hover_zoom">
+                <img src="./img/products/<?php echo $data['prod_img']; ?>">
+            </div>
+            
+        </div>
+    <?php endwhile;
 ?>
