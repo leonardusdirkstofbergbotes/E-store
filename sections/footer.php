@@ -7,21 +7,27 @@
 
 <div id="footy">
     <div id="left">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.314033748079!2d19.007320314346202!3d-34.34248498052796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdd9dccaf23b01%3A0xd99af027e1e23165!2s21%20Neethling%20St%2C%20Kleinmond%2C%207195!5e0!3m2!1sen!2sza!4v1588096270841!5m2!1sen!2sza" 
-        width="300" height="300" id="maps" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>   
+        <div id="leftA">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.314033748079!2d19.007320314346202!3d-34.34248498052796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdd9dccaf23b01%3A0xd99af027e1e23165!2s21%20Neethling%20St%2C%20Kleinmond%2C%207195!5e0!3m2!1sen!2sza!4v1588096270841!5m2!1sen!2sza" 
+            width="250" height="250" id="maps" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>   
+            <img src="./img/hero/store_front.jpg">
+        </div>
     <div id="stack">
         <h3>Visit our branch</h3>
         <p>Cape Town, South Africa</p>
         <p>21 Neethling st</p>
         <p>7430</p>
-        <div id="store_photo">
-            <img src="./img/hero/store_front.jpg">
-        </div>
+        <p></p>
+        <p></p>
+        <h3>Trading hours</h3>
+        <pre>Mon - Fri:     08:00 - 16:00</pre>
+        <pre>Sat:           09:00 - 13:00</pre>
+        <pre>Sun:           Closed</pre>
     </div>
     
     </div>
     <div id="right">
-    <form method="post" class="wrapper" id="signup_form" enctype="multipart/form-data">
+    <form method="post" class="wrapper" id="contact_us" enctype="multipart/form-data">
 
         <h1> Get in touch </h1>
     
@@ -40,14 +46,8 @@
             <textarea class="input" name="message" rows="4" title=""></textarea>
         </div>
 
-
-
-
-
-        
-        <div id="buttonwrap">
-            <div class="sign"><button id="btn" type="submit" onclick="validate()" class="loginbut">Signup</button></div>
-            <div class="login"><a href="login.php"><button type="button" class="registerbut">Login</button></a></div>
+        <div id="send_message">
+            <button class="light_pri_button">Send message</button>
         </div>
         
     </form>

@@ -16,12 +16,24 @@ html {
     border-radius: 4px;
 }
 
+#leftA {
+    display: flex;
+    flex-direction: column;
+}
+
+#leftA img {
+    width: 250px;
+    margin: auto;
+    border-radius: 4px;
+}
+
 .light_pri_button { /* register button, add button */
     border: none;
     outline: none;
     background-color: rgb(141, 141, 251);;
     color: white;
     border-radius: 4px;
+    padding: 10px;
 }
 
 .light_war_button { /* checkout button */
@@ -167,6 +179,16 @@ html {
     margin: 10px auto;
     border-radius: 4px;
     font-size: 20px;
+}
+
+#send_message {
+    width: fit-content;
+    margin: auto;
+}
+
+#send_message button {
+    width: 150px;
+    align-self: center;
 }
 
 #hero {
@@ -461,11 +483,19 @@ html {
     flex: 1;
 }
 
-#stack img {
-    width: 210px;
+
+
+#contact_us > div {
+    display: flex;
     flex: 1;
-    border-radius: 4px;
+    flex-direction: column;
+    margin: 10px;
 }
+
+#contact_us > .input > * {
+    margin: 5px;
+}
+
 
 #footer_bottom {
     display: flex;

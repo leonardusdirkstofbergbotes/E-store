@@ -11,6 +11,7 @@
     function select($var) {
         $result = $this->conn->query($var);
         while ($data = $result->fetch_assoc()) : ?>
+        <?php $id=$data['prod_id']; ?>
             <div class="product_wrapper" id="<?php echo $data['prod_id']; ?>">
             <b id="price">R <?php echo $data['prod_price']; ?></b>
                 <p class="describe"><?php echo $data['prod_desc'] ?> </p>
@@ -18,7 +19,7 @@
                 <div class="buttons">
                     <!-- Trigger show_more modal -->
                     <button class="info" data-target="#show_more_modal" data-toggle="modal" onclick="show_more(this)" id="<?php echo $data['prod_id']; ?>" >Show info</button>
-                    <button class="add" onclick="add_to_cart(this)" id="<?php echo $data['prod_id']; ?>">Add to Cart</button>
+                    <button class="add" <?php if (isset($_SESSION)) { echo "onclick=\"add_to_cart(this)\" id=\"$id\""; } else {echo "onclick=\"alert('please login')\" title=\"please login\"";} ?>>Add to Cart</button>
                 </div>
             </div>
             <?php endwhile; 
