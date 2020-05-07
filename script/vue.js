@@ -1,10 +1,11 @@
+ 
 new Vue ({
     el: '#login_form',
     data: {
         email: '',
         pass: ''
     }
-});
+})
 
 new Vue ({
     el: '#signup_form',

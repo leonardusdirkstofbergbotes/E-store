@@ -29,6 +29,7 @@
     <div id="header">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia impedit, ullam quasi eaque sint corporis quisquam vitae obcaecati. Quibusdam sequi sapiente corporis repellat voluptates dolorem odit velit ad deserunt.</p>
     <div><button>Button</button></div>
+    
 </div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 

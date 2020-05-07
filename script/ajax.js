@@ -6,7 +6,9 @@ function login() {
         data: $('#login_form').serialize(),
         success: function (response) {
            var data = JSON.parse(response);
-           window.value=data;//declaring global variable by window object  
+           naam = data.name;
+           user = data.id;
+           window.value=user;//declaring global variable by window object  
            $.ajax({
             type: 'post',
             url: 'queries/cart.php',
@@ -14,8 +16,16 @@ function login() {
             success: function(data) {
                 $("#cart_content").empty();
                 $("#cart_content").append(data);
+                new Vue ({
+                    el: '#condi',
+                    data: {
+                        name: naam,
+                        ID: window.value
+                    }
+                })
             }
-        })
+        });
+        
         }
     });event.preventDefault(); 
 }
