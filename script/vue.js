@@ -4,4 +4,15 @@ new Vue ({
         email: '',
         pass: ''
     }
+});
+
+new Vue ({
+    el: '#signup_form',
+    data: {
+        name: '',
+        surname: '',
+        email: '',
+        pass1: '',
+        pass2: '',
+    },
 })

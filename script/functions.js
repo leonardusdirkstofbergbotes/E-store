@@ -1,7 +1,13 @@
+$("#login_form").submit(function(event){ //signup modal
+    login(); // handles the data with ajax
+    return false; //prevents page from refreshing
+});
+
 $("#cartbox").hide();
 $("#cart").click(function(){
+    console.log('hello');
     $("#cartbox").toggle(300);
-});
+})
 
 $("#signup_form").submit(function(event){ //signup modal
     signupForm(); // handles the data with ajax

@@ -20,7 +20,8 @@
                 $_SESSION['surname'] = $record['surname'];
                 $_SESSION['user_id'] = $record['user_id'];
                 $_SESSION['email'] = $record['email'];
-                header("Location: ../index.php? session=yes");
+                $user = json_encode($_SESSION['user_id']);
+                echo $user;
             } else if ($pass->num_rows == 0) { /* Password is incorrect */
                 // header("Location: ../login.php? pass= wrong");
             }

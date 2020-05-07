@@ -6,7 +6,7 @@
 			<div class="modal-header">
 				<h2>Login</h2>
 			</div>
-			<form id="login_form" name="contact" role="form" action="queries/check_user.php" method="post">
+			<form id="login_form" name="contact" role="form">
 				<div class="modal-body">				
 
 					<div class="form-group">
@@ -22,7 +22,7 @@
 				</div>
 				<div class="modal-footer">					
 					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_login">Close</button>
-					<button type="submit" id="submit" :class="[email.length >= 6 && pass.length >= 6 ? 'light_pri_button' : 'light_sec_button']" :disabled="email.length < 6 && pass.length < 6">login</button>
+					<button type="submit" onclick="login()" id="submit" :class="[email.length >= 6 && pass.length >= 6 ? 'light_pri_button' : 'light_sec_button']" :disabled="email.length < 6 && pass.length < 6">login</button>
 				</div>
 			</form>
 		</div>
