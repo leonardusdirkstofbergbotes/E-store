@@ -29,8 +29,8 @@
 					</div>							
 				</div>
 				<div class="modal-footer">					
-					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_signup" :disabled="[pass1 == pass2]">Close</button>
-					<input type="submit" class="btn btn-success" id="submit" value="Register">
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_signup">Close</button>
+					<button type="submit" onclick="signupForm()">Register</button>
 				</div>
 			</form>
 		</div>

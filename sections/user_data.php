@@ -7,10 +7,8 @@
     $result = $conn->query($check);
     $record = $result->fetch_assoc(); // gets all the info of the user from the DB
 
-    session_start();
-    $_SESSION['user_id'] = $record['user_id'];
-    $_SESSION['name'] = $record['name'];
-    $_SESSION['surname'] = $record['surname'];
-    $_SESSION['email'] = $record['email'];
-    header('Location: ../index.php? session=yes');
+    $arr = array ("name" => $record['name'],
+                   "id" => $record['user_id']);
+    $data = json_encode($arr);
+    echo $data;
 ?>

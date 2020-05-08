@@ -1,42 +1,31 @@
     
         <form id="select_categ">
-            <!-- Hat section -->
+            <!-- Male Section -->
             <div class="selector">
-                <button><img src="./img/icons/hat.png"></button>
-                <div id="hats" class="choose">
-                    <button onclick="select()"><label for="hats M"><input type="radio" name="prod_categ" value="hats M" id="hats M">Male</label></button>
+                <button>Male</button>
+                <div class="choose">
+                    <button onclick="select('hats M')">Hats</button>
                     <hr>
-                    <button onclick="select()"><label><input type="radio" name="prod_categ" value="hats F">Female</label></button>
+                    <button onclick="select('shirts M')">Shirts</button>
+                    <hr>
+                    <button onclick="select('pants M')">Pants<button>
+                    <hr>
+                    <button onclick="select('shoes M')">Shoes</button>
+                    
                 </div>
             </div>
 
-             <!-- Shirt section -->
+             <!-- Female Section -->
              <div class="selector">
-             <button><img src="./img/icons/shirt.png"></button>
-                <div id="shirt" class="choose">
-                <button onclick="select()"><label><input type="radio" name="prod_categ" value="shirts M">Male</label></button>
+             <button>Female</button>
+                <div class="choose">
+                    <button onclick="select('hats F')">Hats</button>
                     <hr>
-                    <button onclick="select()"><label><input type="radio" name="prod_categ" value="shirts F">Female</label></button>
-                </div>
-            </div>
-
-             <!-- pants section -->
-             <div id="pants" class="selector">
-                <button><img src="./img/icons/pants.png"></button>
-                <div id="pants" class="choose">
-                <button onclick="select()"><label><input type="radio" name="prod_categ" value="pants M">Male</label><button>
+                    <button onclick="select('shirts F')">Shirts</button>
                     <hr>
-                <button onclick="select()"><label><input type="radio" name="prod_categ" value="pants F">Female</label></button>
-                </div>
-            </div>
-
-             <!-- Shoes section -->
-             <div id="shoe" class="selector">
-                <button><img src="./img/icons/shoe.png"></button>
-                <div id="shoes" class="choose">
-                <button onclick="select()"><label><input type="radio" name="prod_categ" value="shoes M">Male</label></button>
+                    <button onclick="select('pants F')">Pants</button>
                     <hr>
-                <button onclick="select()"><label><input type="radio" name="prod_categ" value="shoes F">Female</label></button>
+                    <button onclick="select('shoes F')">Shoes</button>
                 </div>
             </div>
         </form>

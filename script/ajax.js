@@ -8,7 +8,9 @@ function login() {
            var data = JSON.parse(response);
            naam = data.name;
            user = data.id;
-           window.value=user;//declaring global variable by window object  
+           window.value=user;//declaring global variable by window object 
+           $('#login_form').trigger("reset");
+           $('#close_login').click(); 
            $.ajax({
             type: 'post',
             url: 'queries/cart.php',
@@ -50,7 +52,10 @@ function add_to_cart(elmnt) {
     $.ajax({
         type: 'post',
         url: 'queries/add_cart.php',
-        data: {prod_id: id},
+        data: {
+            prod_id: id,
+            user_id: window.value
+        },
         success: function() {
             $.ajax({
                 type: 'post',
@@ -82,15 +87,15 @@ function signupForm(){
         error: function(){
             alert("Error");
         }
-    });
+    });event.preventDefault(); 
 }
 
 
-function select() {
+function select(pick) {
     $.ajax({
         type: 'post',
         url: 'queries/select_category.php',
-        data: $("#select_categ").serialize(),
+        data: pick,
         success: function(data) {
             $('#wrapper').empty();
             $('#wrapper').append(data);

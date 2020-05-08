@@ -120,6 +120,11 @@ html {
     opacity: 1;
 }
 
+#main_content {
+    display: flex;
+    flex-direction: row;
+}
+
 #login {
     background-color: transparent;
     border: 1.5px solid rgb(141, 141, 251);
@@ -212,12 +217,31 @@ html {
     margin-bottom: 40px;
 }
 
+#A {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+}
+
+#B {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 30px;
+}
+
+#C {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+}
+
 .product_wrapper {
     -webkit-box-shadow: 0px 0px 15px -9px #939393; 
     box-shadow: 0px 0px 15px -9px #939393;
     padding: 10px;
     width: 350px;
-    height: 100%;
     margin: 10px;
     background-color: white;
     border-radius: 1%;
@@ -307,9 +331,6 @@ html {
 }
 
 #select_categ { /* side bar form */
-    position: fixed;
-    top: 47px;
-    left: 0;
     width: max-content;
     display: flex;
     flex-direction: column;
@@ -318,7 +339,7 @@ html {
 .selector { /* divs that contain all the sidebar content */
     margin: 20px auto 20px auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .selector button {
@@ -458,15 +479,8 @@ html {
     background-color: rgb(102, 102, 102);
 }
 
-#left {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-}
-
 #maps {
-    border-radius: 2%;
+    border-radius: 4px;
 }
 
 #follow {
@@ -484,9 +498,14 @@ html {
     flex: 1;
 }
 
+#send {
+    width: max-content;
+    margin: 10px 0 auto auto;
+}
 
 
-#contact_us > div {
+
+/* #contact_us > div {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -495,34 +514,20 @@ html {
 
 #contact_us > .input > * {
     margin: 5px;
-}
+} */
 
 
 #footer_bottom {
     display: flex;
+    flex-direction: row;
     background-color: rgb(233, 233, 233);
+    justify-content: center;
 }
 
-#payment_icons {
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
+#footer_bottom > * {
+    margin: auto 10px;
 }
 
-#payment_icons img {
+#footer_bottom img {
     width: 40px;
-}
-
-#nate_bottom {
-    display: flex;
-    flex: 3;
-}
-
-#nate_bottom p {
-    margin: auto;
-    color: rgb(170, 170, 170);
-}
-
-#right {
-    flex: 1;
 }

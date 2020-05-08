@@ -1,6 +1,13 @@
 <?php 
-    $input = $_POST['prod_categ'];
-    $query = "SELECT * FROM products WHERE prod_categ = \"$input\"";
+    foreach ($_POST as $key => $value) {
+        $input = $key;
+    }
+
+
+    global $input;
+    $pick = str_replace('_', ' ', $input);
+
+    $query = "SELECT * FROM products WHERE prod_categ = \"$pick\"";
 
     include "../class/products.php";
     $new = new Products();

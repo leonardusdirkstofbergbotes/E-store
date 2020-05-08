@@ -12,7 +12,7 @@
         $result = $this->conn->query($var);
         while ($data = $result->fetch_assoc()) : ?>
             <div class="product_wrapper" id="<?php echo $data['prod_id']; ?>">
-            <b id="price">R <?php echo $data['prod_price']; ?></b>
+                <b id="price">R <?php echo $data['prod_price']; ?></b>
                 <p class="describe"><?php echo $data['prod_desc'] ?> </p>
                 <img src="./img/products/<?php echo $data['prod_img']; ?>">
                 <div class="buttons">

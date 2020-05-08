@@ -19,7 +19,6 @@
     
 <?php
     include "sections/navbar.php";
-    include "sections/sidebar.php";
     include "sections/signup.php"; // signup modal
     include "sections/login.php";  //login modal
     include "sections/show_more_modal.php"; // show_more modal
@@ -31,6 +30,9 @@
     <div><button>Button</button></div>
     
 </div>
+
+<div id="main_content">
+<?php include "sections/sidebar.php"; ?>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 
         include "class/front_page.php";
@@ -67,7 +69,8 @@
                 <button onclick="right(this)" id="3"> next </button>
             </div>
         </div>
-    </div>
+    </div> <!--wrapper content ends-->
+</div> <!--main content ends-->
     <?php 
         include "sections/footer.php";
     ?>

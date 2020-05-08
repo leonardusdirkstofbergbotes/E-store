@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    $user = $_SESSION['user_id'];
+    $user = $_POST['user_id'];
     $prod_id = $_POST['prod_id'];
 
     $add_cart = "INSERT INTO cart (user, product, size) 
