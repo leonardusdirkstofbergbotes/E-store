@@ -77,10 +77,6 @@ html {
     display: flex;
 }
 
-#login_register p {
-    align-self: center;
-}
-
 #cart {
     border: none;
     outline: none;
@@ -349,6 +345,22 @@ html {
     margin: 0px;
 }
 
+#signed {
+    display: flex;
+}
+
+#signed p { /* signed in user name */
+    margin-top: revert;
+}
+
+.selector button:hover {
+    background-color: rgb(194, 222, 255);
+}
+
+.selector button:focus {
+    outline: 1px solid rgb(138, 138, 255);
+}
+
 .choose {
     display: flex;
     flex-direction: column;
@@ -460,9 +472,6 @@ html {
     background-color: rgb(167, 167, 167);
 }
 
-#footy {
-    padding: 15px;
-}
 
 #footy_header img {
     height: 30px;
@@ -474,9 +483,11 @@ html {
 }
 
 #footy { /* footer */
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    background-color: rgb(102, 102, 102);
+    background-image: url("../img/hero/footer.jpg");
+    background-size: cover;
 }
 
 #maps {

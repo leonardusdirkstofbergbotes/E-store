@@ -5,29 +5,37 @@ function login() {
         url: 'queries/check_user.php',
         data: $('#login_form').serialize(),
         success: function (response) {
-           var data = JSON.parse(response);
-           naam = data.name;
-           user = data.id;
-           window.value=user;//declaring global variable by window object 
-           $('#login_form').trigger("reset");
-           $('#close_login').click(); 
-           $.ajax({
-            type: 'post',
-            url: 'queries/cart.php',
-            data: window.value,
-            success: function(data) {
-                $("#cart_content").empty();
-                $("#cart_content").append(data);
-                $("#cartbox").hide();
-                new Vue ({
-                    el: '#condi',
-                    data: {
-                        name: naam,
-                        ID: window.value
-                    }
-                })
-            }
-        });
+                if (response == 'password') { // password is wrong
+                    swal("Your password is wrong!", "Please try again", "warning");
+                } else if (response == 'verify') { //user must be verified 
+                    swal("Not yey verified!", "Please check your email!", "info");
+                } else if (response == 'exist') { // email does not exist in DB
+                    swal("Invalid email adress!", "This email does not exist!", "error");
+                } else {
+                    var data = JSON.parse(response);
+                    naam = data.name;
+                    user = data.id;
+                    window.value=user;//declaring global variable by window object 
+                    $('#login_form').trigger("reset");
+                    $('#close_login').click(); 
+                    $.ajax({
+                        type: 'post',
+                        url: 'queries/cart.php',
+                        data: window.value,
+                        success: function(data) {
+                            $("#cart_content").empty();
+                            $("#cart_content").append(data);
+                            $("#cartbox").hide();
+                            new Vue ({
+                                el: '#condi',
+                                data: {
+                                    name: naam,
+                                    ID: window.value
+                                }
+                            })
+                        }
+                    });
+                } //else clause ends 
         
         }
     });event.preventDefault(); 

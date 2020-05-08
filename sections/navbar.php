@@ -16,20 +16,12 @@
                         Register
                 </button>
                 <template v-if="name != undefined">
-                    <p>{{ name }}</p>
+                    <div id="signed">
+                        <a href="index.php">Logout</a>
+                        <p>{{name}}</p>
+                    </div>
                 </template>
             </div>
-            
-
-            
-
-            <?php if (isset($_SESSION)) : ?> <!-- loged in as user -->
-            <b><?php echo $_SESSION['name']; ?> </b>
-            <?php endif; ?>
-
-            <?php if (isset($_SESSION)) : ?> <!-- Logout the user -->
-                <a href="./queries/end_ses.php"> Logout </a>
-            <?php endif; ?>
 
         </div>
         <button id="cart"><img src='./img/icons/cart.png'></button>

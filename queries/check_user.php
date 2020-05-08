@@ -28,12 +28,12 @@
                 echo $data;
                 
             } else if ($pass->num_rows == 0) { /* Password is incorrect */
-                // header("Location: ../login.php? pass= wrong");
+                echo "password";
             }
         } else if ($veri->num_rows == 0) { /* User is not verified */
-            // header("Location: ../login.php? verified= no");
+            echo "verify";
         }
     } else if ($exist->num_rows == 0) { /* User doesn't exist */
-        // header("Location: ../login.php? notexist= no");
+        echo "exist";
     }
 ?>
