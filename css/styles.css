@@ -531,3 +531,17 @@ html {
 #footer_bottom img {
     width: 40px;
 }
+
+
+#num_items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    outline: none;
+    border-radius: 50%;
+    font-size: small;
+    border: none;
+    font-weight: bold;
+}

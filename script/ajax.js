@@ -18,6 +18,7 @@ function login() {
             success: function(data) {
                 $("#cart_content").empty();
                 $("#cart_content").append(data);
+                $("#cartbox").hide();
                 new Vue ({
                     el: '#condi',
                     data: {
@@ -61,9 +62,11 @@ function add_to_cart(elmnt) {
                 type: 'post',
                 url: 'queries/cart.php',
                 data: window.value,
-                success: function(data) {
+                success: function(response) {
+                   var items = response;
                     $("#cart_content").empty();
-                    $("#cart_content").append(data);
+                    $("#cart_content").append(response);
+                    $("#cartbox").hide();
                 }
             })
         }
