@@ -24,11 +24,11 @@ $("#signup_form").submit(function(event){ //signup modal
 function right(elmnt) { 
     par = elmnt.id;
     div = $(this).parent().parent();
-    $('#' + par + '.scroll').animate( { scrollLeft: '+=700' }, 1500, 'swing' );
+    $('#' + par + '.scroll').animate( { scrollLeft: '+=270' }, 500, 'swing' );
 }
 
 function left(elmnt) {
     par = elmnt.id;
     div = $(this).parent().parent();
-    $('#' + par + '.scroll').animate( { scrollLeft: '-=700' }, 1500, 'swing' );
+    $('#' + par + '.scroll').animate( { scrollLeft: '-=270' }, 500, 'swing' );
 }
