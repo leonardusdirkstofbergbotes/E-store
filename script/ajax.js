@@ -79,6 +79,8 @@ function add_to_cart(elmnt) {
             })
         }
     })
+    elmnt.innerText = ' Added ......';
+    setTimeout(function(){ elmnt.innerText = 'Add to Cart'; }, 2000);
 }
 
 
@@ -111,7 +113,7 @@ function select(pick) {
             $('#wrapper').empty();
             $('#wrapper').append(data);
             document.getElementById('wrapper').scrollIntoView();
-        }
+        } /* success function end */
     });event.preventDefault(); 
 }
 
