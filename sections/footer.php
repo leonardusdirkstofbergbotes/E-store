@@ -1,8 +1,8 @@
 
 <div id="footy_header">
-    <a href="#"><img src="./img/icons/facebook.png"> Nate's Clothing</a>
-    <a href="#"><img src="./img/icons/twitter.png"> #Nate'sClothing</a>
-    <a href="#"><img src="./img/icons/email.png"> natesclothing@gmail.com</a>
+    <a href="#"><img src="./img/icons/facebook.png"></a>
+    <a href="#"><img src="./img/icons/twitter.png"></a>
+    <a href="#"><img src="./img/icons/email.png"></a>
 </div>
 
 <div id="footy">
@@ -32,12 +32,12 @@
         
             
                 <label for='user_name'>Your name </label>
-                <input type="text" class="form-control" maxlength="255" minlength="3" name="user_name" placeholder="example Joe" title="">
+                <input type="text" class="form-control" maxlength="255" minlength="3" name="user_name" title="">
             
 
              
                 <label for='user_email'>Email adress </label>
-                <input type="email" class="form-control" name="user_email" maxlength="128" placeholder="example@gmail.com" title="">
+                <input type="email" class="form-control" name="user_email" maxlength="128" title="">
             
 
              
@@ -45,7 +45,7 @@
                 <textarea class="form-control" name="message" rows="3.5" title=""></textarea>
             
 
-                <button class="light_sec_button" id="send">Send message</button>
+                <button class="light_pri_button" id="send">Send message</button>
             
         </form> <!-- C ends -->
 </div> 
