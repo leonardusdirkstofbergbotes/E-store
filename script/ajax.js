@@ -1,4 +1,3 @@
-
 function login() {
     $.ajax({
         type: 'post',
@@ -58,12 +57,14 @@ function show_more(elmnt) {
 
 function add_to_cart(elmnt) {
     var id = elmnt.id;
+    let siz = document.getElementById('choosesize').value;
     $.ajax({
         type: 'post',
         url: 'queries/add_cart.php',
         data: {
             prod_id: id,
-            user_id: window.value
+            user_id: window.value,
+            size: siz
         },
         success: function() {
             $.ajax({
@@ -87,7 +88,7 @@ function add_to_cart(elmnt) {
         elmnt.style.backgroundColor = "rgb(141, 141, 251)",
         elmnt.style.color = "white"; }
         , 
-    1500);
+    1500);event.preventDefault(); 
     
 }
 
