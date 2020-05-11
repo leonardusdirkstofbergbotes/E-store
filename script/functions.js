@@ -1,3 +1,10 @@
+window.onscroll = function (e) {  
+    if (window.scrollY > 400) {
+        console.log('you made it');
+        document.getElementById("roll").style.animation = "move_down 4s 1 forwards"; 
+    }
+    } 
+
 $("#login_form").submit(function(event){ //signup modal
     login(); // handles the data with ajax
     return false; //prevents page from refreshing

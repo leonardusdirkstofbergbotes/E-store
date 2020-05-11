@@ -53,7 +53,7 @@ html {
 .light_pri_button { /* register button, add button */
     border: none;
     outline: none;
-    background-color: rgb(141, 141, 251);;
+    background-color: rgb(141, 141, 251);
     color: white;
     border-radius: 4px;
     padding: 10px;
@@ -173,6 +173,8 @@ html {
     right: 0;
     max-height: 400px;
     overflow-y: scroll;
+    padding: 10px;
+    border-bottom-left-radius: 4px;
 }
 
 #cart_header {
@@ -217,7 +219,7 @@ html {
 
 #hero {
     background-image: url("../img/hero/hero.jpg");
-    min-height: 400px; 
+    height: 520px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -319,15 +321,35 @@ html {
 
 .info {
     background-color: transparent;
-    border: 1.5px solid rgb(141, 141, 251);
-    border-radius: 5%;
     color: rgb(141, 141, 251);
+    outline: none;
+    border: none;
     cursor: pointer;
     opacity: 0.6;
 }
 
+.info:focus {
+    outline: none;
+}
+
 .info:hover {
     opacity: 1;
+}
+
+#roll {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    transition: ease-in-out;
+    position: absolute;
+    left: 80px;
+    opacity: 0;
+}
+
+@keyframes move_down {
+    0% {transform: translate(0px, 20px); opacity: 1;}
+    90% {opacity: 1;}
+    100% {transform: translate(0px, 320px); opacity: 0;}
 }
 
 .add {
@@ -337,6 +359,12 @@ html {
     color: white;
     cursor: pointer;
     opacity: 0.6;
+    width: 102px;
+    outline: none;
+}
+
+.add:focus {
+    outline: none;
 }
 
 .add:hover {

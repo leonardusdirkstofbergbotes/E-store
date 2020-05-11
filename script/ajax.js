@@ -79,8 +79,16 @@ function add_to_cart(elmnt) {
             })
         }
     })
+    elmnt.style.backgroundColor = "rgb(141, 251, 178)";
+    elmnt.style.color = "rgb(53, 53, 53)";
     elmnt.innerText = ' Added ......';
-    setTimeout(function(){ elmnt.innerText = 'Add to Cart'; }, 2000);
+    setTimeout(function(){ 
+        elmnt.innerText = 'Add to Cart', 
+        elmnt.style.backgroundColor = "rgb(141, 141, 251)",
+        elmnt.style.color = "white"; }
+        , 
+    1500);
+    
 }
 
 

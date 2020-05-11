@@ -33,6 +33,9 @@
 
 <div id="main_content">
 <?php include "sections/sidebar.php"; ?>
+<div id='roll'>
+        <img src="./img/icons/choose.png">
+    </div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 
         include "class/front_page.php";

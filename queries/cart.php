@@ -38,7 +38,7 @@
             
         } 
         $total = (array_sum($total_price)); 
-        echo $total; 
+        echo "<div id=total_price\">$total</div>"; 
         echo "</div>";
 
     } else { /* the user has no items yet */
