@@ -57,14 +57,12 @@ function show_more(elmnt) {
 
 function add_to_cart(elmnt) {
     var id = elmnt.id;
-    let siz = document.getElementById('choosesize').value;
     $.ajax({
         type: 'post',
         url: 'queries/add_cart.php',
         data: {
             prod_id: id,
-            user_id: window.value,
-            size: siz
+            user_id: window.value
         },
         success: function() {
             $.ajax({
