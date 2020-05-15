@@ -97,11 +97,14 @@ function signupForm(){
         url: "queries/create_user.php",
         data: $('form#signup_form').serialize(),
         success: function(data){
-            $("#close_signup").click()
             if (data == "created") {
                 swal("Successfully registered!", "Please check your email to continue", "success");
+                $("#close_signup").click()
             } else if (data == "exists") {
                 swal("User already exists!", "Try and Login", "info");
+                $("#close_signup").click()
+            } else if (data = "invalid") {
+                swal("Email is incorrect!", "Make sure email is entered correctly", "info");
             }
         },
         error: function(){
