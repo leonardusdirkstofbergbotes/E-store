@@ -99,9 +99,9 @@ function signupForm(){
         success: function(data){
             $("#close_signup").click()
             if (data == "created") {
-                alert('well done');
+                swal("Successfully registered!", "Please check your email to continue", "success");
             } else if (data == "exists") {
-                alert('already exists');
+                swal("User already exists!", "Try and Login", "info");
             }
         },
         error: function(){

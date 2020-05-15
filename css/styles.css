@@ -332,6 +332,10 @@ html {
     outline: none;
 }
 
+#logo {
+    width: 100px;
+}
+
 .info:hover {
     opacity: 1;
 }

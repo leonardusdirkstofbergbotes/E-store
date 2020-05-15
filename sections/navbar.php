@@ -1,5 +1,6 @@
 <nav>
     <div id="navi">
+        <img src="./img/icons/logo.png" id="logo">
         <a href="#footy">About us</a>
         <a href="#footy">Contact us</a>
         <a href="#footy">About us</a>

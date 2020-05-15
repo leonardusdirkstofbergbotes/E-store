@@ -41,6 +41,7 @@ try {
     if ($mail->send() === TRUE) { //If it is successful
         // header("Location: ../login.php? success= yes");
         session_destroy();
+        echo "created";
     }
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
