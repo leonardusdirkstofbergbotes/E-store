@@ -38,7 +38,8 @@
             
         } 
         $total = (array_sum($total_price)); 
-        echo "<div id=total_price\">$total</div>"; 
+        echo "<div id=total_price\">Total price <b>R $total</b></div>"; 
+        echo "<button id=\"checkout\">Checkout</button>"; 
         echo "</div>";
 
     } else { /* the user has no items yet */
