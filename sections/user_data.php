@@ -6,9 +6,6 @@
     $conn->query($alter_note); // will verify the user 
     $result = $conn->query($check);
     $record = $result->fetch_assoc(); // gets all the info of the user from the DB
-
-    $arr = array ("name" => $record['name'],
-                   "id" => $record['user_id']);
-    $data = json_encode($arr);
-    echo $data;
+    echo "You are being redirected to do main page where you can LOGIN";
+    header("Location: ../index.php");
 ?>
