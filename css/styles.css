@@ -139,6 +139,7 @@ html {
 }
 
 #main_content {
+    position: relative;
     display: flex;
     flex-direction: row;
 }
@@ -290,6 +291,22 @@ html {
 
 /* img hover zoom ENDS */
 
+#to_top {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.6;
+    transition: 0.5s;
+    z-index: 1111;
+}
+
+#to_top:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 #show_more_body img {
     width: 100%;
 }
@@ -341,13 +358,15 @@ html {
 }
 
 #roll {
-    display: flex;
-    height: 50px;
-    width: 50px;
     transition: ease-in-out;
     position: absolute;
     left: 80px;
     opacity: 0;
+}
+
+#roll img {
+    height: 50px;
+    width: 50px;
 }
 
 @keyframes move_down {
@@ -385,6 +404,7 @@ html {
     width: max-content;
     display: flex;
     flex-direction: column;
+    height: max-content;
 }
 
 .selector { /* divs that contain all the sidebar content */

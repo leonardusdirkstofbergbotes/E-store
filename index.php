@@ -1,10 +1,3 @@
-<?php 
-    if(isset($_GET['session'])) {
-        session_start();
-    } else {
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +19,11 @@
 ?>
     <div id="hero"></div>
     <div id="header">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est officia impedit, ullam quasi eaque sint corporis quisquam vitae obcaecati. Quibusdam sequi sapiente corporis repellat voluptates dolorem odit velit ad deserunt.</p>
-    <div><button>Button</button></div>
+    <h1>Get the latest fashion trends in just one website</h1>
+    <div><button>Show me</button></div>
     
 </div>
-
+<img id="to_top" src="./img/icons/back_to_top.png">
 <div id="main_content">
 <?php include "sections/sidebar.php"; ?>
 <div id='roll'>
@@ -71,9 +64,7 @@
                 </div>
                 <button onclick="right(this)" id="3"><img src="./img/icons/right.png"></button>
             </div>
-            
-                
-                
+ 
             
         </div>
     </div> <!--wrapper content ends-->
