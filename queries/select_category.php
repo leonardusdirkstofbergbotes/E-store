@@ -3,7 +3,6 @@
         $input = $key;
     }
 
-
     global $input;
     $pick = str_replace('_', ' ', $input);
 

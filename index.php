@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online store</title>
+    <title>Nate's Clothing store</title>
+    <link rel="shortcut icon" href="./img/icons/favi.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
-<?php
+<div id="loader"> <img src="./img/icons/load.gif"> </div>
+<?php 
     include "sections/navbar.php";
     include "sections/signup.php"; // signup modal
     include "sections/login.php";  //login modal
@@ -19,15 +20,15 @@
 ?>
     <div id="hero"></div>
     <div id="header">
-    <h1>Get the latest fashion trends in just one website</h1>
-    <div><button>Show me</button></div>
-    
-</div>
-<img id="to_top" src="./img/icons/back_to_top.png">
+        <h1>Get the latest fashion trends in just one website</h1>
+        <div><button>Show me</button></div>
+    </div> <!-- header ends -->
+
+<img id="to_top" src="./img/icons/back_to_top.png" alt="go back to top"> 
 <div id="main_content">
-<?php include "sections/sidebar.php"; ?>
+    <?php include "sections/sidebar.php"; ?>
 <div id='roll'>
-        <img src="./img/icons/choose.png">
+        <img src="./img/icons/choose.png" alt="select here">
     </div>
     <div id="wrapper"> <!-- main div wrapper that renders all the products -->
     <?php 
@@ -36,33 +37,33 @@
         <div class="featured">
             <b class="categ">Shirts</b>
             <div id="scrolla">
-                <button onclick="left(this)" id="1"><img src="./img/icons/left.png"></button>
+                <button onclick="left(this)" id="1"><img src="./img/icons/left.png" alt="scroll left"></button>
                 <div class="scroll" id="1">
                     <?php $shirts = new Featured('shirts M'); ?>
                 </div>
-                <button onclick="right(this)" id="1"><img src="./img/icons/right.png"></button>
+                <button onclick="right(this)" id="1"><img src="./img/icons/right.png" alt="scroll right"></button>
             </div>
         </div>
 
         <div class="featured">
             <b class="categ">Shoes</b>
             <div id="scrolla">
-                <button onclick="left(this)" id="2"><img src="./img/icons/left.png"></button>
+                <button onclick="left(this)" id="2"><img src="./img/icons/left.png" alt="scroll left"></button>
                 <div class="scroll" id="2">
                     <?php $shoes = new Featured('shoes F'); ?>
                 </div>
-                <button onclick="right(this)" id="2"><img src="./img/icons/right.png"></button>
+                <button onclick="right(this)" id="2"><img src="./img/icons/right.png" alt="scroll right"></button>
             </div>
         </div>
 
         <div class="featured">
             <b class="categ">Hats</b>
             <div id="scrolla">
-                <button onclick="left(this)" id="3"><img src="./img/icons/left.png"></button>
+                <button onclick="left(this)" id="3"><img src="./img/icons/left.png" alt="scroll left"></button>
                 <div class="scroll" id="3">
                     <?php $hats = new Featured('hats F'); ?>
                 </div>
-                <button onclick="right(this)" id="3"><img src="./img/icons/right.png"></button>
+                <button onclick="right(this)" id="3"><img src="./img/icons/right.png" alt="scroll right"></button>
             </div>
  
             

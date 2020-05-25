@@ -5,10 +5,10 @@
 
     // Initialize the mysqli OBJECT 
     function __construct() {
-        $this->conn = new mysqli("localhost:3308","root","","e_store");
+        $this->conn = new mysqli("","","","");
     }
 
-    function select($var) {
+    function select($var) { // user chooses hats or shirts and that gets passed into the function... query gets done 
         $result = $this->conn->query($var);
         while ($data = $result->fetch_assoc()) : ?>
             <div class="product_wrapper" id="<?php echo $data['prod_id']; ?>">

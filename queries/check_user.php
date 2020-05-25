@@ -2,10 +2,10 @@
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $conn = new mysqli('localhost:3308', 'root', '', 'e_store');
-    $check = "SELECT * FROM users WHERE users.email = \"$email\"";
-    $verified = "SELECT * FROM users WHERE users.email = \"$email\" AND users.verified = 1";
-    $doublecheck = "SELECT * FROM users WHERE users.email = \"$email\" AND users.password = \"$pass\"";
+    include "../db/dbconnect.php";
+    $check = "SELECT * FROM user WHERE user.email = \"$email\"";
+    $verified = "SELECT * FROM user WHERE user.email = \"$email\" AND user.verified = 1";
+    $doublecheck = "SELECT * FROM user WHERE user.email = \"$email\" AND user.password = \"$pass\"";
     
     $exist = $conn->query($check);
 
@@ -15,17 +15,10 @@
             $pass = $conn->query($doublecheck);
             if ($pass->num_rows > 0) { /* Everything is correct */
                 $record = $pass->fetch_assoc();
-                // session_start();
-                // $_SESSION['name'] = $record['name'];
-                // $_SESSION['surname'] = $record['surname'];
-                // $_SESSION['user_id'] = $record['user_id'];
-                // $_SESSION['email'] = $record['email'];
-                // $user = json_encode($_SESSION['user_id']);
-                // $name = json_encode($_SESSION['name']);
                 $arr = array ("name" => $record['name'],
                                "id" => $record['user_id']);
                 $data = json_encode($arr);
-                echo $data;
+                echo $data; // send the array back to ajac to process 
                 
             } else if ($pass->num_rows == 0) { /* Password is incorrect */
                 echo "password";

@@ -7,6 +7,15 @@ html {
     scroll-behavior: smooth;
 }
 
+#loader { /* loading gif when ajax starts */
+    position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; 
+      z-index: 3000;
+  }
+
 /* reusable styles */
 
 .light_sec_button { /* login button, info button, scrollby buttons */
@@ -164,6 +173,14 @@ html {
     width: 30px;
 }
 
+img#down_button {
+    display: none;
+}
+
+#dropdown {
+    display: none;
+}
+
 #cartbox { /* the box that drop downs when you click on the cart icon */
     background-color: white;
     width: 400px;
@@ -267,29 +284,6 @@ html {
     background-color: white;
     border-radius: 1%;
 }
-
-/* img hover zoom effect */ 
-
-/* [1] The container */
-/* .img_hover_zoom { */
-    /* height: 400px; /* [1.1] Set it as per your need */
-    /* overflow: hidden; [1.2] Hide the overflowing of child elements */ 
-  /* } */
-  
-  /* [2] Transition property for smooth transformation of images */
-  /* .img_hover_zoom img {
-    transform: translate(0px -30px);
-    height: 400px;
-    width: 80%;
-    transition: transform .5s ease; */
-  /* } */
-  
-  /* [3] Finally, transforming the image when container gets hovered */
-  /* .img_hover_zoom:hover img {
-    transform: scale(1.5); */
-  /* } */
-
-/* img hover zoom ENDS */
 
 #to_top {
     width: 40px;
@@ -550,8 +544,9 @@ html {
     padding: 15px;
 }
 
-#header p {
+#header h1 {
     flex: 3;
+    color: rgb(94, 150, 255);
 }
 
 #header > div {
@@ -635,20 +630,6 @@ html {
     margin: 10px 0 auto auto;
 }
 
-
-
-/* #contact_us > div {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: 10px;
-}
-
-#contact_us > .input > * {
-    margin: 5px;
-} */
-
-
 #footer_bottom {
     display: flex;
     flex-direction: row;
@@ -681,3 +662,142 @@ html {
     border: none;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+    .bucket {
+        margin: 10px 20px;
+    }
+
+ }
+
+ @media screen and (max-width: 650px) {
+    .bucket {
+        margin: 10px 10px;
+    }
+
+    #footy {
+        flex-direction: column;
+    }
+
+    #branch_info {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    #B {
+        flex-direction: row;
+        padding: 10px 30px;
+        justify-content: space-between;
+    }
+
+  }
+  
+ @media screen and (max-width: 600px) {
+    #select_categ {
+        display: block;
+        background-color: white!important;
+        z-index: 2000;
+    }
+
+    .selector {
+        background-color: white;
+        margin: 0px;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    #main_content {
+        display: block;
+    }
+
+    #selec_categ button {
+        background-color: white;
+    }
+
+    #wrapper {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .featured {
+        width: 100%;
+    }
+
+    .product_wrapper {
+        width: 45%;
+    }
+
+    .product_wrapper img {
+        margin: 5px;
+        width: 80%;
+        height: 50%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    #dropdown {
+        height: max-content;
+    display: flex;
+    flex-direction: column;
+    }
+
+    img#logo {
+        display: none;
+    }
+
+    img#down_button {
+        display: flex;
+        width: 25px;
+        height: 30px;
+        margin-left: 15px;
+        align-self: center;
+    }
+
+    a#ab1 {
+        display:none;
+    }
+    a#ab2 {
+        display:none;
+    }
+
+    .bucket {
+        width: 200px;
+        height: 220px;
+    }
+
+    .bucket img {
+        max-height: 160px;
+    }
+
+    .bucket h4 {
+        max-height: 28px;
+        font-size: 16px;
+    }
+
+    .product_wrapper {
+        height: 380px;
+    }
+
+  }
+
+  @media screen and (max-width: 425px) {
+    #header h1 {
+        font-size: 25px;
+    }
+
+    .product_wrapper img {
+        height: 70%;
+    }
+
+    .product_wrapper {
+        width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    #B {
+        padding: 10px 13px;
+    }
+  }

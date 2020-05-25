@@ -1,5 +1,9 @@
 $("#cartbox").hide();
 $("#to_top").hide();
+$("#dropdown").hide();
+$("#down_button").click(function(){
+    $("#dropdown").toggle(300); 
+})
 
 var winheight = $(window).height()
 
@@ -35,13 +39,13 @@ $("#signup_form").submit(function(event){ //signup modal
     return false; //prevents page from refreshing
 });
 
-function right(elmnt) { 
+function right(elmnt) { //scrolls the div to the right
     par = elmnt.id;
     div = $(this).parent().parent();
     $('#' + par + '.scroll').animate( { scrollLeft: '+=270' }, 500, 'swing' );
 }
 
-function left(elmnt) {
+function left(elmnt) { //scrolls the div to the left
     par = elmnt.id;
     div = $(this).parent().parent();
     $('#' + par + '.scroll').animate( { scrollLeft: '-=270' }, 500, 'swing' );

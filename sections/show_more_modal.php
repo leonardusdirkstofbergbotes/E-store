@@ -1,5 +1,5 @@
 
-<!-- Modal -->
+<!-- Show more Modal -->
 <div id="show_more_modal" class="modal fade bd-example-modal-lg" role="dialog">
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">

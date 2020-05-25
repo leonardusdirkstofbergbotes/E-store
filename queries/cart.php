@@ -2,10 +2,10 @@
     foreach ($_POST as $key => $value) {
         $user_id = $key;
     }
-    $total_price = array();
+    $total_price = array(); // all the individual items prices gets added to the array and then counted to get the total
     global $user_id;
     $get_cart = "SELECT * FROM cart WHERE cart.user = \"$user_id\"";
-    $conn = new mysqli('localhost:3308', 'root', '', 'e_store');
+    include "../db/dbconnect.php";
     $items = $conn->query($get_cart);
     $count = $items->num_rows;
         

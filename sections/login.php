@@ -1,5 +1,5 @@
 
-<!-- Modal -->
+<!-- Login Modal -->
 <div id="login_modal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -21,7 +21,7 @@
 
 				</div>
 				<div class="modal-footer">					
-					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_login">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" id="close_login">Close</button> <!-- Closes the modal -->
 					<button type="submit" onclick="login()" id="submit" :class="[email.length >= 6 && pass.length >= 6 ? 'light_pri_button' : 'light_sec_button']" :disabled="email.length < 6 && pass.length < 6">login</button>
 				</div>
 			</form>

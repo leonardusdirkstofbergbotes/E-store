@@ -1,3 +1,10 @@
+$('#loader').hide();
+    $(document).ajaxStart(function () {
+        $("#loader").show();
+    }).ajaxStop(function () {
+        $("#loader").hide();
+    });
+
 function login() {
     $.ajax({
         type: 'post',
@@ -11,12 +18,12 @@ function login() {
                 } else if (response == 'exist') { // email does not exist in DB
                     swal("Invalid email adress!", "This email does not exist!", "error");
                 } else {
-                    var data = JSON.parse(response);
+                    var data = JSON.parse(response); //data = username and user id as it is in the DB
                     naam = data.name;
                     user = data.id;
-                    window.value=user;//declaring global variable by window object 
+                    window.value=user;// store the user ID in a global var.  will be used for the queries 
                     $('#login_form').trigger("reset");
-                    $('#close_login').click(); 
+                    $('#close_login').click(); // button that closes the modal
                     $.ajax({
                         type: 'post',
                         url: 'queries/cart.php',
@@ -37,13 +44,12 @@ function login() {
                 } //else clause ends 
         
         }
-    });event.preventDefault(); 
+    });event.preventDefault(); // prevents html from submitting the form and refreshing the page
 }
 
 
 function show_more(elmnt) {
     but = elmnt.id;
-    
     $.ajax({
         type: 'post',
         url: 'queries/show_more.php',
@@ -68,7 +74,7 @@ function add_to_cart(elmnt) {
             $.ajax({
                 type: 'post',
                 url: 'queries/cart.php',
-                data: window.value,
+                data: window.value, // User ID
                 success: function(response) {
                    var items = response;
                     $("#cart_content").empty();
@@ -97,13 +103,13 @@ function signupForm(){
         url: "queries/create_user.php",
         data: $('form#signup_form').serialize(),
         success: function(data){
-            if (data == "created") {
+            if (data == "created") { // signup was a success
                 swal("Successfully registered!", "Please check your email to continue", "success");
                 $("#close_signup").click()
-            } else if (data == "exists") {
+            } else if (data == "exists") { // user is already registered before
                 swal("User already exists!", "Try and Login", "info");
                 $("#close_signup").click()
-            } else if (data = "invalid") {
+            } else if (data = "invalid") { // email is not valid
                 swal("Email is incorrect!", "Make sure email is entered correctly", "info");
             }
         },
@@ -123,7 +129,7 @@ function select(pick) {
             $('#wrapper').empty();
             $('#wrapper').append(data);
             document.getElementById('wrapper').scrollIntoView();
-        } /* success function end */
+        }
     });event.preventDefault(); 
 }
 
