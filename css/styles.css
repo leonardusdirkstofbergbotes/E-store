@@ -261,6 +261,7 @@ img#down_button {
 
 .gallery {
     margin-top: 20px;
+    margin-bottom: 30px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -697,6 +698,14 @@ img#down_button {
         margin: 10px 20px;
     }
 
+    .gallery_image_Wrapper {
+        width: 30%;
+    }
+    
+    .gallery_image_Wrapper img {
+        height: 280px;
+    }
+
  }
 
  @media screen and (max-width: 650px) {
@@ -816,6 +825,14 @@ img#down_button {
         font-size: 25px;
     }
 
+    .gallery_image_Wrapper {
+        width: 25%;
+    }
+    
+    .gallery_image_Wrapper img {
+        height: 180px;
+    }
+
     .product_wrapper img {
         height: 70%;
     }
@@ -828,5 +845,13 @@ img#down_button {
   @media screen and (max-width: 390px) {
     #B {
         padding: 10px 13px;
+    }
+
+    .gallery_image_Wrapper {
+        width: 42%;
+    }
+    
+    .gallery_image_Wrapper img {
+        height: 190px;
     }
   }
