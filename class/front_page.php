@@ -4,7 +4,7 @@
 
         // Initialize the mysqli OBJECT 
         function __construct($que) {
-            $this->conn = new mysqli("","","","");
+            $this->conn = new mysqli();
             $select = "SELECT * FROM products WHERE prod_categ = \"$que\" LIMIT 6";
             $result = $this->conn->query($select);
             while ($data = $result->fetch_assoc()) : ?> 

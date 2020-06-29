@@ -5,7 +5,7 @@
 
     // Initialize the mysqli OBJECT 
     function __construct() {
-        $this->conn = new mysqli("","","","");
+        $this->conn = new mysqli();
     }
 
     function select($var) { // user chooses hats or shirts and that gets passed into the function... query gets done 

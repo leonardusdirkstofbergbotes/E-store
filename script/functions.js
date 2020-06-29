@@ -14,7 +14,7 @@ window.onscroll = function (e) { /* removes the "back_to_top" button once a user
     if (window.scrollY > 400) { /* makes the sidebar sticky */
         $('#select_categ').css({
             "position": "sticky",
-            "top": "0px"
+            "top": "40px"
         });
         $("#to_top").show(300); /* starts the animation when a user reaches this point */
         document.getElementById("roll").style.animation = "move_down 4s 1 forwards"; 

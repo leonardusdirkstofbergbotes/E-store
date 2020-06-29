@@ -89,10 +89,14 @@ html {
 /* reusable styles END */
 
 #navi {
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     height: 45px;
-    background-color: transparent;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #navi a {
