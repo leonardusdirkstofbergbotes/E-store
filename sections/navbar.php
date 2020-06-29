@@ -31,6 +31,7 @@
 </nav>
 
 <div id="dropdown">
-        <a href="#B">About us</a>
-        <a href="#C">Contact us</a>
+        <a href="./views/about.php">About us</a>
+        <a href="./views/contact.php">Contact us</a>
+        <a href="./views/gallery.php">Gallery</a>
     </div>

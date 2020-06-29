@@ -43,8 +43,8 @@
 </nav>
 
 <div id="dropdown">
-        <a href="#B">About us</a>
-        <a href="#C">Contact us</a>
+        <a href="about.php">About us</a>
+        <a href="contact.php">Contact us</a>
     </div>
     
 
