@@ -642,8 +642,52 @@ img#down_button {
     background-attachment: fixed;
 }
 
+.teamWrap {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.teamWrap col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+}
+
+.teamWrap .col img {
+    border-radius: 50%;
+    width: 100%;
+    height: 300px;
+}
+
+.teamWrap .col p {
+    text-align: center;
+}
+
+.aboutUs {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.aboutUs h1 {
+    margin-bottom: 25px;
+}
+
+.aboutUs p {
+    margin-bottom: 40px;
+}
+
+#trading pre{
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+}
+
 #B pre {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
     color: rgb(117, 117, 117);
 }
 

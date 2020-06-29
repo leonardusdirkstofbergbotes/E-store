@@ -119,7 +119,7 @@
 
 
 <div class="featured custom">
-    <b class="categ">Shirts</b>
+    <b class="categ">Gallery of all our products</b>
     <div id="scrolla">
         <button onclick="left2(this)" id="1"><img src="../img/icons/left.png" alt="scroll left"></button>
         <div class="scroll" id="1">
