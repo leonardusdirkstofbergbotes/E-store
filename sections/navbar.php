@@ -2,8 +2,9 @@
     <div id="navi">
         <img src="./img/icons/logo.png" id="logo" alt="Nate's Clothing logo">
         <img src="./img/icons/down.png" id="down_button" alt="Click me">
-        <a href="#B" id="ab1">About us</a>
-        <a href="#C" id="ab2">Contact us</a>
+        <a href="./views/about.php" id="ab1">About us</a>
+        <a href="./views/contact.php" id="ab2">Contact us</a>
+        <a href="./views/gallery.php" id="ab2">Gallery</a>
         <div id="login_register">  <!-- Login and register buttons -->
              
             <!-- Trigger login modal -->
