@@ -117,20 +117,36 @@
 	</div>
 </div> <!-- Login ENds -->
 
-<div class="gallery">
 
-<?php 
-	require "../db/dbconnect.php";
-	$query = "SELECT * FROM products";
-	$result = $conn->query($query);
-	while ($data = $result->fetch_assoc()) : ?>
-		<div class="gallery_image_Wrapper" id="<?php echo $data['prod_id']; ?>">
-			<img src="../img/products/<?php echo $data['prod_img']; ?>">
-		</div>
-	<?php endwhile; 
-?>
-
+<div class="featured custom">
+    <b class="categ">Shirts</b>
+    <div id="scrolla">
+        <button onclick="left2(this)" id="1"><img src="../img/icons/left.png" alt="scroll left"></button>
+        <div class="scroll" id="1">
+            <?php
+            require "../db/dbconnect.php";
+            $query = "SELECT * FROM products";
+            $result = $conn->query($query);
+            while ($data = $result->fetch_assoc()) : ?> 
+                <div class="bucket" id="<?php echo $data['prod_id']; ?>"> 
+                    <h4><?php echo $data['prod_name'] ?></h4>
+                    <img id="<?php echo $data['prod_id']; ?>" onclick="showCase(this)" src="../img/products/<?php echo $data['prod_img']; ?>">
+                </div>
+            
+            <?php endwhile; ?>
+        </div>
+        <button onclick="right2(this)" id="1"><img src="../img/icons/right.png" alt="scroll right"></button>
+    </div>
 </div>
+
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg">
+</div>
+
 
 <div id="footy_header">
     <a href="#"><img src="../img/icons/facebook.png" alt="goto facebook"></a>
