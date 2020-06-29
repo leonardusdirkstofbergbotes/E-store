@@ -89,7 +89,6 @@ html {
 /* reusable styles END */
 
 #navi {
-    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     height: 45px;
@@ -97,6 +96,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1500;
 }
 
 #navi a {
@@ -257,6 +257,31 @@ img#down_button {
     justify-content: space-evenly;
     margin-top: 50px;
     margin-bottom: 40px;
+}
+
+.gallery {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery_image_Wrapper {
+    display: block;
+    width: 20%;
+    margin: 10px;
+    transition: ease-in 0.5s;
+}
+
+.gallery_image_Wrapper:hover {
+    transform: scale(1.3);
+}
+
+.gallery_image_Wrapper img {
+    width: 100%;
+    height: 300px;
 }
 
 #A {

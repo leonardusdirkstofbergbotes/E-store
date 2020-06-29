@@ -34,6 +34,8 @@
     <?php 
         include "class/front_page.php";
     ?> 
+
+    <h1>Check out some of our featured products</h1>
         <div class="featured">
             <b class="categ">Shirts</b>
             <div id="scrolla">
@@ -64,10 +66,22 @@
                     <?php $hats = new Featured('hats F'); ?>
                 </div>
                 <button onclick="right(this)" id="3"><img src="./img/icons/right.png" alt="scroll right"></button>
-            </div>
- 
-            
+            </div>   
         </div>
+
+        <h1>Coming soon to Nate's Online store</h1>
+        
+        <div class="featured">
+            <b class="categ">Hats</b>
+            <div id="scrolla">
+                <button onclick="left(this)" id="3"><img src="./img/icons/left.png" alt="scroll left"></button>
+                <div class="scroll" id="3">
+                    <?php $hats = new Featured('hats F'); ?>
+                </div>
+                <button onclick="right(this)" id="3"><img src="./img/icons/right.png" alt="scroll right"></button>
+            </div>   
+        </div>
+
     </div> <!--wrapper content ends-->
 </div> <!--main content ends-->
     <?php 
