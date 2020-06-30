@@ -137,7 +137,7 @@
 		</div>
 
 		<div class="col">
-			<img src="">
+			<img src="../img/team/tess.webp">
 			<p>Tess Sliosberg - Researcher</p>
 		</div>
 	
