@@ -132,3 +132,20 @@ function showCase(elmnt) {
     magnify("expandedImg", 2);
 }
 
+let getReward = () => {
+    var box = document.getElementById('box');
+    var reward = document.getElementById('reward');
+    var randomnum = Math.floor(Math.random() * 41 + 1);
+    console.log(randomnum);
+    box.classList.add("removeBox");
+    reward.classList.add("giveReward");
+    box.src = "box/box1.gif";
+    reward.src = "rewards/"+randomnum+".gif";
+    setTimeout(function(){ 
+        box.src = "";
+        box.classList.remove("removeBox");
+        reward.src = "";
+        reward.classList.remove("giveReward");
+    }, 8000);
+}
+

@@ -383,6 +383,18 @@ img#down_button {
     opacity: 0.6;
 }
 
+.blue {
+    color: rgb(141, 141, 251);
+}
+
+.over {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
 .info:focus {
     outline: none;
 }

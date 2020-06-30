@@ -35,7 +35,7 @@
         include "class/front_page.php";
     ?> 
 
-    <h1>Check out some of our featured products</h1>
+    <h1 class="blue">Check out some of our featured products</h1>
         <div class="featured">
             <b class="categ">Shirts</b>
             <div id="scrolla">
@@ -69,16 +69,22 @@
             </div>   
         </div>
 
-        <h1>Coming soon to Nate's Online store</h1>
+        <h1 class="blue m1">Coming soon to Nate's Online store</h1>
         
         <div class="featured">
-            <b class="categ">Hats</b>
             <div id="scrolla">
-                <button onclick="left(this)" id="3"><img src="./img/icons/left.png" alt="scroll left"></button>
-                <div class="scroll" id="3">
-                    <?php $hats = new Featured('hats F'); ?>
+                <button onclick="left(this)" id="4"><img src="./img/icons/left.png" alt="scroll left"></button>
+                <div class="scroll" id="4">
+                    <?php $i = 1;
+                    while ($i <= 5) : ?> 
+                        <div class="bucket">
+                            <img class="over" src="./img/icons/soon.png">
+                            <img src="./img/upcoming/<?php echo $i ?>.png">
+                        </div>
+                    <?php $i++;
+                    endwhile; ?>
                 </div>
-                <button onclick="right(this)" id="3"><img src="./img/icons/right.png" alt="scroll right"></button>
+                <button onclick="right(this)" id="4"><img src="./img/icons/right.png" alt="scroll right"></button>
             </div>   
         </div>
 
